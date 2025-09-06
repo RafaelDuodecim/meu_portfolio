@@ -1,0 +1,592 @@
+
+/*Estilo Geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:aqua;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+h2.titulo{
+    color: antiquewhite;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+h2.titulo span{
+    color: aqua;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px aqua;
+    transform: scale(1.05); 
+}
+
+
+/*Estilo do Cabeçalho*/
+
+header{
+    padding: 30px 3%;
+}
+
+header > .interface{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+}
+
+
+header a{
+    color: rgba(9, 218, 255, 0.767);
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+
+header a:hover{
+    color: antiquewhite;
+    transform: scale(1.09);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+/* Estilo da logo */
+header .logo img {
+    width: 180px;   /* controla a largura */
+    height: auto;   /* mantém a proporção da imagem */
+}
+
+
+/*Topo do Site*/
+
+section.topo-do-site{
+    padding: 40px 4%;
+     
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90PX;
+    
+}
+
+.topo-do-site h1{
+    color: antiquewhite;
+    font-size: 47px;
+    line-height: 40PX;
+    
+}
+
+
+.topo-do-site h1 span{
+    color: aqua;
+    font-size: 74PX;
+}
+
+
+.topo-do-site p{
+    color: antiquewhite;
+    margin: 20px;
+    margin-top: 20px;
+}
+
+.topo-do-site .img-topo-do-site img{
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite alternate;
+    width: 420px;   /* controla a largura */
+    height: auto;   /* mantém a proporção da imagem */
+}
+
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 40px;
+    }
+}
+
+/* Container das especialidades */
+section.especialidades .flex {
+    display: flex;
+    flex-wrap: wrap;      /* permite quebrar a linha */
+    gap: 50px;            /* espaço entre os boxes */
+    justify-content: center; /* centraliza os boxes */
+}
+
+/* Cada box de especialidade */
+.especialidades .especialidades-box {
+    color: antiquewhite;
+    padding: 30px;
+    border-radius: 20px;
+    transition: .2s;
+    flex: 1 1 calc(33.333% - 40px); /* ocupa 1/3 da linha, considerando o gap */
+    box-sizing: border-box;
+    min-width: 250px; /* garante responsividade em telas pequenas */
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 9px rgba(0, 255, 255, 0.438);
+}
+
+.especialidades .especialidades-box i {
+    font-size: 36px;
+    color: aqua;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+/*Estilo Sobre*/
+
+section.sobre{
+    padding: 90px 4%;
+    align-items: center;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: antiquewhite;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 44px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: aqua;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    border: none;
+    background-color: aqua;
+    font-size: 33px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/*Estilo do portfólio*/
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 9px aqua;
+}
+
+section.portfolio .flex{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40PX;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 223, 223, 0.103);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color:antiquewhite;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*Estilo do Formulário de Contato*/
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px;
+    
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.123);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: aqua;
+}
+
+form textarea{
+    resize: none;
+    max-width: 500px;
+    
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: rgba(0, 255, 255, 0.377);
+    color: antiquewhite;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+
+/*Estilo do rodape*/
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 9px aqua;
+}
+
+footer .flex {
+    display: flex;              
+    align-items: center;        
+    justify-content: space-between; 
+    flex-wrap: nowrap;          
+    gap: 20px;                  
+}
+
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid aqua;
+
+}
+
+footer .line-footer p i{
+    color: aqua;
+    font-size: 22px;
+    
+}
+
+footer .line-footer p a{
+    color: antiquewhite;
+    
+}
+
+/* Ajuste da logo do footer */
+footer .logo-footer img {
+    max-width: 180px;  /* controla largura máxima */
+    width: 100%;       /* torna responsivo em telas pequenas */
+    height: auto;      /* mantém proporção */
+    display: block;    /* remove espaços extras */
+}
+
+
+/*Deixando o site responsivo */
+
+
+/* Menu lateral só aparece no mobile */
+.menu-lateral {
+    display: none; /* esconde por padrão */
+}
+
+
+
+
+/* Botão menu mobile */
+
+.menu-mobile {
+    display: none; /* esconde por padrão */
+}
+
+@media screen and (max-width: 1020px){
+
+    .menu-mobile {
+        display: block; /* mostra o botão */
+    }
+
+    .menu-lateral {
+        display: block; /* mostra o menu lateral quando estiver no mobile */
+    }
+
+    /* esconder menu desktop e botão contato no mobile */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+
+    /* Estilo da logo */
+    header .logo img {
+    width: 130px;   /* controla a largura */
+    height: auto;   /* mantém a proporção da imagem */
+    }
+
+    /*Classes gerais*/
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+    font-size: 27px;
+    line-height: 30px;
+    text-align: center;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /*cabeçalho navegador*/
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /*Topo do site*/
+
+    section.topo-do-site{
+        padding: 27px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 37;
+        line-height: 70%;
+        text-align: center;
+    }
+
+
+    /*Especialidades*/
+
+    section.especialidades{
+    margin-bottom: 50px;
+    padding: 50px 8%;
+    display: grid;
+    gap: 70px;
+    
+}
+
+section.especialidades h2 {
+    color: antiquewhite;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px; /* aumenta a distância entre o título e os boxes */
+}
+
+  /*  section.especialidades {
+    padding: 40px 6%;
+    }*/
+
+
+    /*Sobre*/
+
+    section.sobre{
+    padding: 80px 8%;
+    align-items: center;
+}
+
+
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+.btn-social{
+    text-align: center;
+}
+
+/*Imagem da descrição sobre*/
+
+.img-sobre img{  /*Imagem da descrição sobre*/
+ width: 280px;   /* controla a largura */
+ height: auto;   /* mantém a proporção da imagem */
+}
+
+
+/*Portfolio*/
+
+section.portfolio{
+    padding: 80px 4%;
+    
+}
+
+.img-port{
+    width: 100%;
+    max-width:360px;
+    margin: 0 auto;
+    height: 160px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 15PX;
+    position: relative;
+}   
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.103);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color:antiquewhite;
+    opacity: 0;
+    transition: .5s;
+}
+
+/* Botão menu mobile */
+.menu-mobile {
+    display: none;
+    font-size: 40px;
+    color: aqua;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    box-shadow: -2px 0 8px rgba(0, 255, 255, 0.4);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-lateral ul li {
+    margin: 20px 0;
+}
+
+.menu-lateral ul li a {
+    color: antiquewhite;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-lateral ul li a:hover {
+    color: aqua;
+}
+
+/* Ativo */
+.menu-lateral.ativo {
+    right: 0;
+}
+
+/* Só aparece no mobile */
+@media screen and (max-width: 1020px) {
+    .menu-mobile {
+        display: block;
+    }
+}
+
+
+}
