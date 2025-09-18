@@ -273,6 +273,20 @@ section.portfolio .flex{
     opacity: 1;
 }
 
+/* Faz o link dentro da overlay ficar branco e tirar sublinhado */
+.overlay a {
+    color: #ffffff;         /* branco */
+    text-decoration: none;   /* remove sublinhado */
+    font-weight: bold;       /* opcional: negrito */
+}
+
+/* Efeito quando o mouse passa sobre o link */
+.overlay a:hover {
+    color: aqua;         /* muda cor ao passar o mouse */
+    cursor: pointer;        /* mostra a mãozinha */
+}
+
+
 /*Estilo do Formulário de Contato*/
 
 section.formulario{
