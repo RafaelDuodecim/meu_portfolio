@@ -231,7 +231,7 @@ section.portfolio{
 
 section.portfolio .flex{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /*Grid da disposição de projetos por linha*/
     gap: 40px;
     margin-top: 60px;
 }
@@ -243,7 +243,7 @@ section.portfolio .flex{
     background-position: 100% 0%;
     transition: 8s;
     cursor: pointer;
-    border-radius: 20PX;  /*Aqui está as bordas da imagem*/
+    border-radius: 20px;  /*Aqui está as bordas da imagem*/
     position: relative;
 }
 
@@ -259,14 +259,14 @@ section.portfolio .flex{
     height: 100%;
     background-color: rgba(63, 223, 223, 0.103);
     border-radius: 40px;
-    display: flex;
+    display: flex; /*Nome do projeto no portfolio*/
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
     color:antiquewhite;
     opacity: 0;
-    transition: .5s;
+    transition: .3s;
 }
 
 .overlay:hover{
