@@ -147,7 +147,7 @@ section.topo-do-site .flex{
 section.especialidades .flex {
     display: flex;
     flex-wrap: wrap;      /* permite quebrar a linha */
-    gap: 50px;            /* espaço entre os boxes */
+    gap: 33px;            /* espaço entre os boxes */
     justify-content: center; /* centraliza os boxes */
 }
 
@@ -168,13 +168,13 @@ section.especialidades .flex {
 }
 
 .especialidades .especialidades-box i {
-    font-size: 36px;
-    color: aqua;
+    font-size: 36px; /*Tamanho do título "Minhas Habilidades"*/
+    color: aqua;   /*Cor do texto*/
 }
 
 .especialidades .especialidades-box h3 {
-    font-size: 28px;
-    margin: 15px 0;
+    font-size: 25px; /*Título em minhas habilidades "Tamanho"*/
+    margin: 25px 0;  /*Distância entre o texto e o título*/
 }
 
 
@@ -230,7 +230,7 @@ section.portfolio{
 }
 
 section.portfolio .flex{
-    display: grid;
+    display: grid; /*Diposição da visualização baseada em grid da seção*/
     grid-template-columns: repeat(3, 1fr); /*Grid da disposição de projetos por linha*/
     gap: 40px;
     margin-top: 60px;
@@ -241,7 +241,7 @@ section.portfolio .flex{
     height: 460px;
     background-size: cover;
     background-position: 100% 0%;
-    transition: 8s;
+    transition: 3s; /*velocidade que a imagem sobre*/
     cursor: pointer;
     border-radius: 20px;  /*Aqui está as bordas da imagem*/
     position: relative;
@@ -265,12 +265,12 @@ section.portfolio .flex{
     font-size: 24px;
     font-weight: 600;
     color:antiquewhite;
-    opacity: 0;
+    opacity: .2;
     transition: .3s;
 }
 
 .overlay:hover{
-    opacity: 1;
+    opacity: 2;
 }
 
 /* Faz o link dentro da overlay ficar branco e tirar sublinhado */
