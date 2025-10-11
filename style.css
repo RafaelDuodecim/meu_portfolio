@@ -21,6 +21,17 @@ body{
     display: flex;
 }
 
+.btn-Currículo button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:aqua;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
 .btn-contato button{
     padding: 10px 40px;
     font-size: 18px;
@@ -286,6 +297,7 @@ section.portfolio .flex{
     cursor: pointer;        /* mostra a mãozinha */
 }
 
+/* Testando Leituras*/
 
 /*Estilo do Formulário de Contato*/
 
@@ -394,7 +406,6 @@ footer .logo-footer img {
 .menu-lateral {
     display: none; /* esconde por padrão */
 }
-
 
 
 
