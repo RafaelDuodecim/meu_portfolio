@@ -12,8 +12,16 @@ body{
     height: 100vh;
 }
 
+/*       dando vida aos navegadores
+
+html {
+  scroll-behavior: smooth;
+}
+
+*/
+
 .interface{
-    max-width: 1280px;
+    max-width: 1480px;   
     margin: 0 auto;
 }
 
@@ -21,6 +29,7 @@ body{
     display: flex;
 }
 
+/* Desativado
 .btn-Curriculo button{
     padding: 10px 40px;
     font-size: 18px;
@@ -30,7 +39,7 @@ body{
     border-radius: 20px;
     cursor: pointer;
     transition: 0.2s;
-}
+}  */
 
 .btn-contato button{
     padding: 10px 40px;
@@ -63,7 +72,7 @@ button:hover, form .btn-enviar input:hover{
 /*Estilo do Cabeçalho*/
 
 header{
-    padding: 30px 3%;
+    padding: 20px 3%;   /*Ajustar a altura das páginas*/
 }
 
 header > .interface{
@@ -93,6 +102,7 @@ header nav ul{
 header nav ul li{
     display: inline-block;
     padding: 0 40px;
+    font-size: 17px; /*Tamanho da fonte do meu superior*/
 }
 
 
@@ -106,28 +116,28 @@ header .logo img {
 /*Topo do Site*/
 
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 20px 4%;  /*texto ao ado da imagem*/
      
 }
 
 section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
-    gap: 90PX;
+    gap: 60px;
     
 }
 
 .topo-do-site h1{
     color: antiquewhite;
     font-size: 47px;
-    line-height: 40PX;
+    line-height: 40px;
     
 }
 
 
 .topo-do-site h1 span{
     color: aqua;
-    font-size: 74PX;
+    font-size: 74px;
 }
 
 
@@ -281,7 +291,7 @@ section.portfolio .flex{
 }
 
 .overlay:hover{
-    opacity: 2;
+    opacity: 1;
 }
 
 /* Faz o link dentro da overlay ficar branco e tirar sublinhado */
@@ -464,7 +474,7 @@ footer .logo-footer img {
         padding: 27px 8%;
     }
     .topo-do-site h1{
-        font-size: 37;
+        font-size: 37px;
         line-height: 70%;
         text-align: center;
     }
