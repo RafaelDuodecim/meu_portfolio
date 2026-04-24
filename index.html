@@ -69,7 +69,7 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-do-site">
-                        <h1>Aprender e Ser Curioso<span>.</span></h1>
+                        <h1 class="digitando"> Aprender e Ser Curioso <span>.</span></h1>
                         
                         <p>Valorizo o aprendizado constante e acredito que a curiosidade, a criatividade e o foco 
                             são essenciais para inovar, resolver problemas e gerar valor em ambientes dinâmicos.
@@ -281,12 +281,50 @@
     </footer>
 
     <script>
-        const btnMenu = document.querySelector('.menu-mobile');
-        const menuLateral = document.querySelector('.menu-lateral');
+        // MENU MOBILE
+const btnMenu = document.querySelector('.menu-mobile');
+const menuLateral = document.querySelector('.menu-lateral');
 
-        btnMenu.addEventListener('click', () => {
-            menuLateral.classList.toggle('ativo');
-        });
+if (btnMenu && menuLateral) {
+    btnMenu.addEventListener('click', () => {
+        menuLateral.classList.toggle('ativo');
+    });
+}
+
+// DIGITAÇÃO
+function escreverLoop() {
+    const elemento = document.querySelector('.digitando');
+    if (!elemento) return;
+
+    const texto = elemento.textContent;
+
+    let i = 0;
+
+    function digitar() {
+        if (i < texto.length) {
+            elemento.textContent += texto.charAt(i);
+            i++;
+            setTimeout(digitar, 75);
+        } else {
+            setTimeout(apagar, 1500); // espera antes de apagar
+        }
+    }
+
+    function apagar() {
+        if (i > 0) {
+            elemento.textContent = texto.substring(0, i - 1);
+            i--;
+            setTimeout(apagar, 40);
+        } else {
+            setTimeout(digitar, 500); // reinicia
+        }
+    }
+
+    elemento.textContent = ''; // limpa antes de começar
+    digitar();
+}
+
+escreverLoop();
     </script>
 
     <script src="script.js"></script>
