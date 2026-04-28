@@ -106,7 +106,6 @@ if (formContato) {
                 formContato.reset();
             } else {
                 mensagemForm.textContent = 'Erro ao enviar. Tente novamente.';
-                mensagemForm.classList.add('erro');
             }
 
         } catch (erro) {
