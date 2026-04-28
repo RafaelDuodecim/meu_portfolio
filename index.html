@@ -26,7 +26,7 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="index.html">Portfólio</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li> <!--Navegação por ancoragem-->
                     <li><a href="#">Minhas Leituras</a></li>
                     <li><a href="#">Cursos</a></li>
                     <li><a href="#">Textos Econômicos</a></li>
@@ -53,7 +53,7 @@
         <!-- Menu lateral (abre no mobile) -->
         <nav class="menu-lateral">
             <ul>
-                <li><a href="index.html">Portfólio</a></li>
+                <li><a href="#portfolio">Portfólio</a></li> <!--Navegação por ancoragem-->
                 <li><a href="#">Minhas Leituras</a></li>
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Textos Econômicos</a></li>
@@ -69,8 +69,9 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-do-site">
-                        <h1 class="digitando"> Aprender e Ser Curioso <span>.</span></h1>
-                        
+                     
+                        <h1 class="digitando"> Aprender e Ser Curioso </h1>
+                                               
                         <p>Valorizo o aprendizado constante e acredito que a curiosidade, a criatividade e o foco 
                             são essenciais para inovar, resolver problemas e gerar valor em ambientes dinâmicos.
                             Ter em mente que o aprendizado deva ser e, é essencial para manter-se sempre
@@ -194,47 +195,53 @@
             </div><!--interface-->
         </section><!--sobre-->
     
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio"> <!--Navegação por ancora-->
             <div class="interface">
                 <h2 class="titulo">Meu <span>Portfólio.</span></h2>
+                <div class="filtros">  <!--Botões-->
+                <button onclick="filtrar('todos')">Todos</button>
+                <button onclick="filtrar('bi')">Power BI</button>
+                <button onclick="filtrar('logistica')">Logística</button>
+                <button onclick="filtrar('projetos')">Projetos</button>
+                </div>
                 <div class="flex">
                    <!-- Aqui é o primeiro projeto -->
-                    <div class="img-port" style="background-image: url(projetos/Projeto_01.png);"> <!--Adc imagem no projeto-->
+                    <div class="img-port bi" style="background-image: url(projetos/Projeto_01.png);"> <!--Adc imagem no projeto-->
                         <div class="overlay">
                             <a href="https://app.powerbi.com/view?r=eyJrIjoiZDViOTk0Y2UtODZkYy00NTRkLWEyZDQtYTY2ODE4ZGI3Y2Q2IiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEz
                             ODkyYiJ9" target="_blank"> Projeto01 </a>
                         </div>
                     </div>
                     <!-- Aqui é o segundo projeto -->
-                    <div class="img-port" style="background-image: url(projetos/projeto_02.png);">
+                    <div class="img-port bi" style="background-image: url(projetos/projeto_02.png);">
                         <div class="overlay">
                             <a href="https://app.powerbi.com/view?r=eyJrIjoiNzRhM2Q1ZjgtZDkxMi00Mjg3LTg2ZDUtZjVmYmI4ZjVlNTkwIiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEzODkyYiJ9" 
                             target="_blank">Projeto02</a>
                         </div>
                     </div>
                     <!-- Aqui é o terceiro projeto -->
-                    <div class="img-port" style="background-image: url(projetos/Projeto_03.png);">
+                    <div class="img-port bi" style="background-image: url(projetos/Projeto_03.png);">
                         <div class="overlay">
                             <a href="//app.powerbi.com/view?r=eyJrIjoiMjJjNThkMjYtMGU4Yy00MzE4LWEzYzEtNDRkMzQzOGNiYzUwIiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEzODkyYiJ9"
                             target="_blank" > Projeto03</a>
                         </div>
                     </div>   
                     <!-- Aqui é o quarto projeto -->
-                    <div class="img-port" style="background-image: url(projetos/04projeto_cédulas_falsificadas.png);">
+                    <div class="img-port bi" style="background-image: url(projetos/04projeto_cédulas_falsificadas.png);">
                         <div class="overlay">
                             <a href="//app.powerbi.com/view?r=eyJrIjoiMGYxZWVlNTYtMzllMi00NWQxLWIxNmYtMjg5ZWJmY2Y4MWYwIiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEzODkyYiJ9"
                             target="_blank" > Projeto04</a>
                         </div>
                     </div>
                     <!-- Aqui é o quinto projeto-->  
-                    <div class="img-port" style="background-image: url(projetos/05projeto_de_logistica_curso.png);">
+                    <div class="img-port bi" style="background-image: url(projetos/05projeto_de_logistica_curso.png);">
                         <div class="overlay">
                             <a href="//app.powerbi.com/view?r=eyJrIjoiZmQ4MWZjYzctMzg3Yy00NWE0LTlmNDgtMTAwNGI3YjE2MWVjIiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEzODkyYiJ9"
                             target="_blank">Projeto05</a>
                         </div>
                     </div>
                     <!-- Aqui é o sexto projeto-->
-                    <div class="img-port" style="background-image: url(projetos/06projeto_de_logistica_forms.png);">
+                    <div class="img-port bi" style="background-image: url(projetos/06projeto_de_logistica_forms.png);">
                         <div class="overlay">
                             <a href="//app.powerbi.com/view?r=eyJrIjoiMDJlNTQ4YTAtMDZlOS00NWM0LTk3MGItZGM0MzVjMWMyZWE3IiwidCI6ImRjYzZiZjVjLTNiZjctNGFlOC04OWZlLWI5N2MwMjEzODkyYiJ9"
                             target="_blank">Projeto 06</a>
@@ -247,13 +254,21 @@
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">Fale <span>Comigo.</span></h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Nome Completo" required>
-                    <input type="text" name="" id="" placeholder="Melhor E-mail" required>
-                    <input type="text" name="" id="" placeholder="Whatsapp ou Celular" required>
-                    <textarea name="" id="" placeholder="Melhor Mensagem" required></textarea>
-                    <div class="btn-enviar"> <input type="submit" value="Enviar"></div>
-                </form>
+            <form id="form-contato" action="https://formspree.io/f/mnjlkkvp" method="POST">
+
+                <input type="text" name="nome" placeholder="Nome Completo" required>
+                <input type="email" name="email" placeholder="Melhor E-mail" required>
+                <input type="tel" name="telefone" placeholder="Whatsapp ou Celular" required>
+                <textarea name="message" placeholder="Melhor Mensagem" required></textarea>
+                <input type="text" name="_honey" style="display:none">
+
+                 <p id="mensagem-form"></p>
+
+                <div class="btn-enviar">
+                    <button type="submit" id="btn-form">Enviar</button>
+                </div>
+
+            </form>
             </div><!--interface-->
         </section><!--formulario-->
     </main>
@@ -279,53 +294,6 @@
             </div><!--line-footer-->
         </div><!--interface-->
     </footer>
-
-    <script>
-        // MENU MOBILE
-const btnMenu = document.querySelector('.menu-mobile');
-const menuLateral = document.querySelector('.menu-lateral');
-
-if (btnMenu && menuLateral) {
-    btnMenu.addEventListener('click', () => {
-        menuLateral.classList.toggle('ativo');
-    });
-}
-
-// DIGITAÇÃO
-function escreverLoop() {
-    const elemento = document.querySelector('.digitando');
-    if (!elemento) return;
-
-    const texto = elemento.textContent;
-
-    let i = 0;
-
-    function digitar() {
-        if (i < texto.length) {
-            elemento.textContent += texto.charAt(i);
-            i++;
-            setTimeout(digitar, 75);
-        } else {
-            setTimeout(apagar, 1500); // espera antes de apagar
-        }
-    }
-
-    function apagar() {
-        if (i > 0) {
-            elemento.textContent = texto.substring(0, i - 1);
-            i--;
-            setTimeout(apagar, 40);
-        } else {
-            setTimeout(digitar, 500); // reinicia
-        }
-    }
-
-    elemento.textContent = ''; // limpa antes de começar
-    digitar();
-}
-
-escreverLoop();
-    </script>
 
     <script src="script.js"></script>
 

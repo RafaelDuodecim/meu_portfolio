@@ -12,13 +12,13 @@ body{
     height: 100vh;
 }
 
-/*       dando vida aos navegadores
+     /* dando vida aos navegadores */
 
 html {
   scroll-behavior: smooth;
 }
 
-*/
+
 
 .interface{
     max-width: 1480px;   
@@ -134,12 +134,13 @@ section.topo-do-site .flex{
     
 }
 
-.digitando::after {
-    content: '|';
+.digitando::after {   /*Alterando o ponot final do portfolio*/
+    content: '.|';
     margin-left: 5px;
     animation: pisca 0.6s infinite;
     color: aqua;
 }
+
 
 @keyframes pisca {
     0%, 100% {
@@ -262,6 +263,10 @@ section.sobre .flex{
 
 /*Estilo do portfólio*/
 
+#portfolio {
+    scroll-margin-top: 90px;
+}
+
 section.portfolio{
     padding: 80px 4%;
     box-shadow: 0 0 40px 9px aqua;
@@ -379,7 +384,67 @@ form .btn-enviar input{
     transition: .3s;
 
 }
+/*Formulario envios */
+#mensagem-form {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    min-height: 24px;
+}
 
+#mensagem-form.sucesso {
+    color: aqua;
+}
+
+#mensagem-form.erro {
+    color: #ff4d4d;
+}
+
+.btn-enviar button {
+    width: 120px;
+    padding: 15px;
+    background-color: rgba(0, 255, 255, 0.377);
+    color: antiquewhite;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-enviar button:hover {
+    box-shadow: 0px 0px 8px aqua;
+    transform: scale(1.05);
+}
+
+.btn-enviar button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+/*Boões do portfolio */
+.filtros {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.filtros button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:aqua;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filtros button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px aqua;
+}
 
 /*Estilo do rodape*/
 
@@ -547,6 +612,31 @@ section.especialidades h2 {
 
 
 /*Portfolio*/
+
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 9px aqua;
+}
+
+.esconder {
+    display: none;
+}
+
+
+.filtros button.ativo {
+    background: white;
+    color: black;
+}
+
+
+.img-port {
+    transition: 0.4s;
+}
+
+
+/*Fim section bottuns */
+
 
 section.portfolio{
     padding: 80px 4%;
