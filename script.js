@@ -117,3 +117,32 @@ if (formContato) {
         btnForm.textContent = 'Enviar';
     });
 }
+
+
+// botão rolando e subindo o site
+
+
+const btnTopo = document.getElementById("btn-topo");
+
+// Mostrar botão quando rolar
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        btnTopo.style.display = "block";
+    } else {
+        btnTopo.style.display = "none";
+    }
+});
+
+if (window.scrollY > 300) {
+    btnTopo.classList.add("ativo");
+} else {
+    btnTopo.classList.remove("ativo");
+}
+
+// Voltar ao topo ao clicar
+btnTopo.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
