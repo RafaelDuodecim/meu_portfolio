@@ -146,3 +146,28 @@ btnTopo.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+let index = 0;
+
+function mover(direcao) {
+    const track = document.getElementById("track");
+    const livros = document.querySelectorAll(".livro");
+
+    const itensVisiveis = 4;
+    const total = livros.length;
+
+    const max = total - itensVisiveis;
+
+    index += direcao;
+
+    if (index < 0) {
+        index = 0;
+    }
+
+    if (index > max) {
+        index = max;
+    }
+
+    const larguraItem = livros[0].offsetWidth + 30; // 30 = gap
+
+    track.style.transform = `translateX(${-index * larguraItem}px)`;
+}

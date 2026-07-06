@@ -19,7 +19,6 @@ html {
 }
 
 
-
 .interface{
     max-width: 1480px;   
     margin: 0 auto;
@@ -29,19 +28,15 @@ html {
     display: flex;
 }
 
-/* Desativado
-.btn-Curriculo button{
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color:aqua;
-    border: 0;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.2s;
-}  */
+/*Grupo Botões iniciooo contato currículo*/
 
-.btn-contato button{
+.grupo-botoes{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
@@ -51,6 +46,14 @@ html {
     cursor: pointer;
     transition: 0.2s;
 }
+
+.btn:hover{
+    background-color: #00c8c8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+/*Fim Grupo Botões*/
 
 h2.titulo{
     color: antiquewhite;
@@ -182,9 +185,15 @@ section.topo-do-site .flex{
     }
 }
 
-/* Container das especialidades */
+/* Container das especialidades/ minhas habilidades */
+
+section.especialidades{  /*Afastando o texto da linha muito bom*/
+    padding: 100px 4%;
+}
+
 section.especialidades .flex {
     display: flex;
+    margin-top: 30px; /*Afastando o título do texto*/
     flex-wrap: wrap;      /* permite quebrar a linha */
     gap: 33px;            /* espaço entre os boxes */
     justify-content: center; /* centraliza os boxes */
@@ -207,6 +216,8 @@ section.especialidades .flex {
 }
 
 .especialidades .especialidades-box i {
+    margin-top: 40px;
+    margin-bottom: 80px;
     font-size: 36px; /*Tamanho do título "Minhas Habilidades"*/
     color: aqua;   /*Cor do texto*/
 }
@@ -217,7 +228,8 @@ section.especialidades .flex {
 }
 
 
-/*Estilo Sobre*/
+/*Estilo Sobre meu perfil
+*/
 
 section.sobre{
     padding: 90px 4%;
@@ -467,10 +479,10 @@ footer .line-footer{
 }
 
 .borda{
-    border-top: 2px solid aqua;
+    border-top: 1px solid aqua;
 
 }
-
+ /* Linha do rodapé */
 footer .line-footer p i{
     color: aqua;
     font-size: 22px;
@@ -522,6 +534,7 @@ footer .logo-footer img {
     .btn-contato {
         display: none;
     }
+    
 
 
     /* Estilo da logo */
@@ -549,6 +562,10 @@ footer .logo-footer img {
     .menu-desktop, .btn-contato{
         display: none;
     }
+
+    .menu-desktop {
+    position: relative;
+}
 
     /*Topo do site*/
 
@@ -741,13 +758,35 @@ section.portfolio{
     padding: 80px 4%;
 }
 
+
+
+.leituras .flex {
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 .livro {
-    width: 250px;
-    margin: 15px;
+    color: antiquewhite;
+    padding: 15px;
+    border-radius: 20px;
+    transition: .2s;
+
+    flex: 0 0 240px;
+    width: 240px; /* igual conceito do especialidades */
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .livro img {
     width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: rgba(0, 255, 255, 0.1);
+    padding: 10px;
     border-radius: 15px;
 }
 
@@ -755,6 +794,105 @@ section.portfolio{
     transform: scale(1.05);
 }
 
+
+.info {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resenha {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.4;
+    text-align: justify;
+
+    padding: 10px;
+    border-radius: 12px;
+
+    background-color: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.resenha:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+/*Carrosel */
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.carrossel-viewport {
+    width: 750px; /* 3 livros de 220px + gap */
+    overflow: hidden;
+}
+
+.carrossel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+/*Botão Carrossel */
+
+.seta {
+    background: rgba(0, 255, 255, 0.2);
+    border: none;
+    font-size: 40px;
+    color: aqua;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.seta:hover {
+    background: aqua;
+    color: black;
+}
+
+/* Linhas de Divisão */
+
+/*Divisão entre blocos */
+section {
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        aqua,
+        transparent
+    );
+}
 
 /* botão topo do site*/
 

@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--Google Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--Google Fontes-->
+
     <!--BootStrap Icons-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!--Fim Bootstrap Icons-->
 
     <link rel="stylesheet" href="style.css">
     <title>Rafael Santos</title>
 </head>
-<body>
 
+<body>
     <button id="btn-topo">
        <i class="bi bi-arrow-up"></i>
     </button>
+    
     <header>
         <div class= "interface">
             <div class="logo">
@@ -28,25 +31,19 @@
                 </a>
             </div><!--logo-->
 
+            <!--Botões do Navegador-->
+            <!--Navegação por ancoragem-->
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#portfolio">Portfólio</a></li> <!--Navegação por ancoragem-->
-                    <li><a href="leituras.html#leituras" target="_blank">Minhas Leituras</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li> 
+                    <li><a href="#leituras">Minhas Leituras</a></li>
                     <li><a href="#">Cursos</a></li>
                     <li><a href="#">Textos Econômicos</a></li>
                     <li><a href="#">Artigos Científicos</a></li>
                     <li><a href="#">Meus Versos Literários</a></li>
-
-                    
+                     
                 </ul>
-            </nav>
-            <!--  Retirei o botão currículo
-            <div class="btn-Curriculo">
-                <a href="Curriculo_Rafael Santos Silva.pdf" target="_blank">
-            <button>Currículo</button>
-                </a>
-            </div>
-            -->
+            </nav>         
 
             <!-- Ícone hambúrguer (só mobile) -->
             <div class="menu-mobile">
@@ -60,44 +57,46 @@
                 <li><a href="#portfolio">Portfólio</a></li> <!--Navegação por ancoragem-->
                 <li><a href="leituras.html#leituras" target="_blank">Minhas Leituras</a></li>
                 <li><a href="#">Cursos</a></li>
-                <li><a href="#">Textos Econômicos</a></li>
+                <li><a href="#">Refutações Econômicas</a></li>
                 <li><a href="#">Artigos Científicos</a></li>
-                <li><a href="#">Meus Versos Literários</a></li>
+                <li><a href="#">Versos Literários</a></li>
             </ul>
         </nav>
 
     </header>
-
-    <main>
-        <section class="topo-do-site">
-            <div class="interface">
+<main>
+  <section class="topo-do-site">
+       <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-do-site">
                      
                         <h1 class="digitando"> Aprender e Ser Curioso </h1>
-                                               
+                                  
                         <p>Valorizo o aprendizado constante e acredito que a curiosidade, a criatividade e o foco 
                             são essenciais para inovar, resolver problemas e gerar valor em ambientes dinâmicos.
                             Ter em mente que o aprendizado deva ser e, é essencial para manter-se sempre
                             atualizado e inovando constantemente. A liberdade humana é conquistada através do conhecimento,
-                            conhecimento este que deve ser conquistado com um Estado forte e uma sociedade Livre.
+                            conhecimento este que deve ser conquistado com um Estado forte, e uma sociedade Livre.
                         </p>
 
-                        <!--
 
-                        <h2 class="citacao">
-                            "Não é o mais forte que sobrevive, nem o mais inteligente, 
-                            mas o que melhor se adapta às mudanças"  Charles Darwin
-                        </h2> 
+<!--    Botões do currículo e do entrar em contato   -->                  
+<div class="grupo-botoes">
 
-                        -->
-                        
+    <div class="btn-contato">
+        <a href="#contato">
+            <button class="btn">Entre em Contato</button>
+        </a>
+    </div>
 
-                            <div class="btn-contato">
-                                <a href="#contato">
-                                     <button> Entre em Contato </button> 
-                                </a>
-                            </div>
+    <div class="btn-curriculo">
+        <a href="Curriculo_Rafael Santos Silva.pdf" target="_blank">
+            <button class="btn">Currículo</button>
+        </a>
+    </div>
+
+</div>
+                          
                     </div><!--topo-do-site-->
 
                     <div class="img-topo-do-site">
@@ -110,54 +109,77 @@
         <section class="especialidades">
             <div class="interface">
                 <h2 class="titulo">Minhas <span>Habilidades.</span></h2>
+                
                 <div class="flex">
                     <div class="especialidades-box">
                         <i class="bi bi-microsoft"></i>
+                        
                         <h3>Pacote Office</h3>
-                        <p>Proficiência no Pacote Office, especificamente, me considero um resolvedor de problemas em Excel e demais ferramentas. Minha experiência vai além do uso básico da ferramenta, 
-                        pois a aplico de forma estratégica para resolver problemas e otimizar processos na minha área de atuação. 
-                    </p>
+                        
+                        <p>Domínio do Pacote Office, especialmente do Microsoft Excel, utilizado para análise de dados, desenvolvimento de dashboards, 
+                            automação de planilhas e otimização de processos. Atuo como um solucionador de problemas, criando ferramentas e controles 
+                            que apoiam equipes de diferentes áreas na tomada de decisões, no acompanhamento de indicadores e na melhoria contínua das operações.
+                        </p>
                     </div><!--especialidades-box-->
                     
                     <div class="especialidades-box">
                         <i class="bi bi-people"></i>
+                        
                         <h3>Liderança
                     
                         </h3>
-                        <p>Tenho experiência em liderar equipes em áreas estratégicas e operacionais e fui responsável por monitorar o desempenho de equipes, prestadores e motoristas.
-                            Durante minha experiência em gestão de equipes, turnos e projetos, otimizei processos reduzi banco de horas, elevei o desempenho do time.
+                        <p>Experiência em liderança e análise de operações logísticas, com atuação em Armazém, Last Mile, Sort Center, Service Center 
+                            e Transportes. Gestão de equipes, terceiros e motoristas, com foco em indicadores, melhoria contínua e alta performance. 
+                            Resultados alcançados: +23% de produtividade, SLA elevado de 98% para 99% e 15% de redução nas falhas de processamento.
                         </p>
                     </div><!--especialidades-box-->
                     
                     <div class="especialidades-box">
                         <i class="bi bi-graph-up-arrow"></i>
+                        
                         <h3>Análise de Dados</h3>
-                        <p>Experiência com a gestão de indicadores, incluindo KPI e OKR. Meu principal diferencial é a capacidade analítica baseada em dados, que alinha a visão estratégica 
-                           com a execução operacional para promover melhorias contínuas e resultados consistentes. Através dos dados reduzi custos da operação, trouxe melhorias atavés de análises.
+                        
+                        <p>Experiência na gestão de KPIs e OKRs, utilizando análise de dados para apoiar decisões estratégicas e operacionais. 
+                            Transformo dados em insights que promovem redução de custos, otimização de processos, automação e melhoria contínua, 
+                            gerando resultados consistentes e maior eficiência operacional.
                         </p>
                     </div><!--especialidades-box-->
 
                     <div class="especialidades-box">
                         <i class="bi bi-person-gear"></i>
+                        
                         <h3>Otimização de Processos</h3>
-                        <p>Liderei a implantação de novos processos, rotas e projetos com foco em melhoria contínua, integrando tecnologias para monitoramento e avaliação de desempenho. 
-                        Atuei na otimização de rotas e na maximização da eficiência da frota, reduzindo custos operacionais e garantindo resultados consistentes para a operação.
+                        
+                        <p>Liderei a implantação de rotas, projetos logísticos e processos operacionais, incluindo participação em BIDs e estudos de viabilidade, 
+                            com foco em eficiência, redução de custos e melhoria contínua. Atuei na otimização de malhas e rotas, aumento da produtividade da frota, 
+                            automação de processos e integração de tecnologias para monitoramento operacional. Também desenvolvi dashboards e soluções de DataViz para 
+                            acompanhamento de KPIs, análise de desempenho e suporte estratégico à tomada de decisões, contribuindo para resultados sustentáveis e maior 
+                            eficiência das operações.
                         </p>
                     </div><!--especialidades-box-->
 
                     <div class="especialidades-box">
                         <i class="bi bi-buildings-fill"></i>
+                        
                         <h3>Logística</h3>
-                        <p>Atuo em operações de Sort Center com foco em treinamento e suporte na operação, já atuei em logística de Last Mile, com experiência em roteirização, escala, monitoramento, pagamento e expedição. 
-                           Sou responsável pelo treinamento de equipes e pela implantação de processos que aumentam a eficiência operacional, otimizam recursos e garantem a excelência na entrega de resultados.
+                        
+                        <p>Profissional de operações logísticas com experiência em Sort Center (GIG7 Amazon) e forte vivência no e-commerce, atuando ponta a ponta na cadeia logística, 
+                            incluindo First Mile, Last Mile, Coletas, Reversa e operações de apoio (Área da Saúde). Atuação em treinamento de equipes, suporte operacional e melhoria 
+                            contínua de processos, com foco em qualidade, eficiência e padronização operacional. Experiência em captação, roteirização, escala, monitoramento, gestão 
+                            de indicadores, expedição e pagamentos operacionais, garantindo controle e fluidez das operações em ambientes de alta demanda. Responsável pela implantação 
+                            de processos e desenvolvimento de equipes operacionais, contribuindo para aumento de produtividade, redução de falhas e melhoria contínua dos resultados no 
+                            curto e longo prazo.
                         </p>
                     </div><!--especialidades-box-->
 
                     <div class="especialidades-box">
                         <i class="bi bi-buildings-fill"></i>
+                        
                         <h3>Resiliência</h3>
-                        <p>Atuando em logística, desenvolvi resiliência e adaptalidade, pensamento rápido, pois são setores que exigem o alinhamento de múltiplas áreas, como gestão de estoques, transportadoras, colaboração entre áreas e equipes. 
-                            Ao unir visão estratégica à análise operacional, consigo superar desafios do dia a dia, identificar oportunidades de melhoria contínua e gerar resultados consistentes para a operação.
+                        
+                        <p>Atuando na área de logística, desenvolvi resiliência, adaptabilidade e pensamento analítico rápido, competências essenciais em ambientes dinâmicos que exigem alinhamento entre diferentes áreas, 
+                            como gestão de estoques, transportadoras e equipes operacionais. Ao integrar visão estratégica com análise operacional, consigo atuar na resolução de problemas do dia a dia, identificar oportunidades 
+                            de melhoria contínua e contribuir para a geração de resultados consistentes e sustentáveis para a operação.
                         </p>
                     </div><!--especialidades-box-->
 
@@ -253,7 +275,74 @@
                     </div>             
                 </div><!--flex-->
             </div><!--interface-->
-        </section><!--portfolio-->
+        </section>
+        
+        
+<section id="leituras" class="leituras">
+    <div class="interface">
+
+        <h2 class="titulo">Minhas leituras e <span>Recomendações.</span></h2>
+
+        <div class="carrossel">
+
+            <button class="seta esquerda" onclick="mover(-1)">‹</button>
+
+            <div class="carrossel-viewport">
+
+                <div class="carrossel-track" id="track">
+
+                    <a href="https://link-da-compra-aqui.com" target="_blank" class="livro">
+                        <img src="img_leituras/churchil.jpg" alt="">
+                        <div class="info">
+                            <h3>A Sabedoria de Winston Churchill</h3>
+                            <p class="resenha">Texto aqui...</p>
+                        </div>
+                    </a>
+
+                    <div class="livro">
+                        <img src="img_leituras/danile carler.jpg" alt="">
+                        <div class="info">
+                            <h3>Hábitos Atômicos</h3>
+                            <p>Pequenas mudanças...</p>
+                        </div>
+                    </div>
+
+                    <div class="livro">
+                        <img src="img_leituras/danile carler.jpg" alt="">
+                        <div class="info">
+                            <h3>Hábitos Atômicos</h3>
+                            <p>Pequenas mudanças...</p>
+                        </div>
+                    </div>
+
+                    <div class="livro">
+                        <img src="img_leituras/danile carler.jpg" alt="">
+                        <div class="info">
+                            <h3>Hábitos Atômicos</h3>
+                            <p>Pequenas mudanças...</p>
+                        </div>
+                    </div>
+
+                    <div class="livro">
+                        <img src="images/poder-habito.jpg" alt="">
+                        <div class="info">
+                            <h3>O Poder do Hábito</h3>
+                            <p>Como hábitos funcionam...</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="seta direita" onclick="mover(1)">›</button>
+
+        </div>
+
+    </div>
+</section>
+        
+        <!--portfolio-->
 
         <section id="contato" class="formulario">
             <div class="interface">
@@ -293,7 +382,7 @@
                 </div><!--flex-->                
             </div><!--line-footer-->
             <div class="line-footer borda">
-                <p><i class="bi bi-arrow-right-square"></i> <a href="https://wa.me/5521989124304"> Todos os direitos reservados a Rafael Santos</a> </p>
+                <p><i class="bi bi-arrow-right-square"></i> <a href="https://wa.me/5521972371368"> Todos os direitos reservados a Rafael Santos</a> </p>
                 
             </div><!--line-footer-->
         </div><!--interface-->
