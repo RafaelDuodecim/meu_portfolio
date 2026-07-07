@@ -846,7 +846,7 @@ a {
 }
 
 .carrossel-viewport {
-    width: 1350px; /* 3 livros de 220px + gap */
+    width: 1350px; /* 5 livros de 220px + gap */
     overflow: hidden;
 }
 
