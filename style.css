@@ -771,11 +771,9 @@ section.portfolio{
     padding: 15px;
     border-radius: 20px;
     transition: .2s;
-
     flex: 0 0 240px;
-    width: 240px; /* igual conceito do especialidades */
+    width: 240px; 
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -799,10 +797,19 @@ section.portfolio{
     width: 100%;
     margin-top: 10px;
     text-align: center;
+}
 
+.info h3 {
+    font-size: 16px;
+    color: antiquewhite;
+    font-weight: 600;
+    
+    /* O TRUQUE: Força a área do título a ter sempre o espaço de 3 linhas */
+    height: 68px; 
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;      /* Centraliza títulos menores verticalmente */
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .resenha {
@@ -839,7 +846,7 @@ a {
 }
 
 .carrossel-viewport {
-    width: 750px; /* 3 livros de 220px + gap */
+    width: 1350px; /* 3 livros de 220px + gap */
     overflow: hidden;
 }
 
