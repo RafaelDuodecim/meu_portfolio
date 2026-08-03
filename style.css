@@ -1,4 +1,3 @@
-
 /*Estilo Geral*/
 *{
     margin: 0;
@@ -12,12 +11,10 @@ body{
     height: 100vh;
 }
 
-     /* dando vida aos navegadores */
-
+/* dando vida aos navegadores */
 html {
   scroll-behavior: smooth;
 }
-
 
 .interface{
     max-width: 1480px;   
@@ -29,7 +26,6 @@ html {
 }
 
 /*Grupo Botões iniciooo contato currículo*/
-
 .grupo-botoes{
     display: flex;
     gap: 20px;
@@ -61,7 +57,6 @@ h2.titulo{
     text-align: center;
 }
 
-
 h2.titulo span{
     color: aqua;
 }
@@ -71,9 +66,7 @@ button:hover, form .btn-enviar input:hover{
     transform: scale(1.05); 
 }
 
-
 /*Estilo do Cabeçalho*/
-
 header{
     padding: 20px 3%;   /*Ajustar a altura das páginas*/
 }
@@ -82,9 +75,7 @@ header > .interface{
     display: flex;
     align-items:center;
     justify-content: space-between;
-
 }
-
 
 header a{
     color: rgba(9, 218, 255, 0.767);
@@ -108,33 +99,27 @@ header nav ul li{
     font-size: 17px; /*Tamanho da fonte do meu superior*/
 }
 
-
 /* Estilo da logo */
 header .logo img {
     width: 180px;   /* controla a largura */
     height: auto;   /* mantém a proporção da imagem */
 }
 
-
 /*Topo do Site*/
-
 section.topo-do-site{
     padding: 20px 4%;  /*texto ao ado da imagem*/
-     
 }
 
 section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
     gap: 60px;
-    
 }
 
 .topo-do-site h1{
     color: antiquewhite;
     font-size: 47px;
     line-height: 40px;
-    
 }
 
 .digitando::after {   /*Alterando o ponot final do portfolio*/
@@ -143,7 +128,6 @@ section.topo-do-site .flex{
     animation: pisca 0.6s infinite;
     color: aqua;
 }
-
 
 @keyframes pisca {
     0%, 100% {
@@ -155,12 +139,10 @@ section.topo-do-site .flex{
     }
 }
 
-
 .topo-do-site h1 span{
     color: aqua;
     font-size: 74px;
 }
-
 
 .topo-do-site p{
     color: antiquewhite;
@@ -175,7 +157,6 @@ section.topo-do-site .flex{
     height: auto;   /* mantém a proporção da imagem */
 }
 
-
 @keyframes flutuar{
     0%{
         top: 0;
@@ -185,7 +166,164 @@ section.topo-do-site .flex{
     }
 }
 
-/* Container das especialidades/ minhas habilidades */
+/* ========================================================= */
+/* SEÇÃO GERAL DE HABILIDADES (IMPACTO / ESPECIALIDADES / FERRAMENTAS) */
+/* ========================================================= */
+
+.secao-geral-habilidades {
+    padding: 80px 4%;
+    width: 100%;
+}
+
+.secao-geral-habilidades .interface {
+    margin-bottom: 70px;
+}
+
+.secao-geral-habilidades .interface:last-child {
+    margin-bottom: 0;
+}
+
+/* --- 1. CARDS DE IMPACTO --- */
+.cards-impacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card-impacto {
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    color: antiquewhite;
+    transition: 0.3s ease;
+}
+
+.card-impacto:hover {
+    transform: translateY(-8px);
+    border-color: aqua;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.card-impacto i {
+    font-size: 40px;
+    color: aqua;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.card-impacto h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card-impacto p {
+    font-size: 15px;
+    color: #ccc;
+}
+
+/* --- 2. CARDS DE ESPECIALIDADES --- */
+.cards-especialidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card-especialidade {
+    background: rgba(0, 255, 255, 0.03);
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 25px 15px;
+    text-align: center;
+    color: antiquewhite;
+    transition: 0.3s ease;
+}
+
+.card-especialidade:hover {
+    transform: translateY(-5px);
+    border-color: aqua;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+    background: rgba(0, 255, 255, 0.08);
+}
+
+.card-especialidade i {
+    font-size: 32px;
+    color: aqua;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.card-especialidade h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* --- 3. CARDS DE FERRAMENTAS --- */
+/* --- CARDS DE FERRAMENTAS --- */
+.cards-ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cards-ferramentas .tool {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: antiquewhite;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Tamanho padronizado para ícones Devicon e Imagens */
+.cards-ferramentas .tool i {
+    font-size: 24px;
+}
+
+.cards-ferramentas .tool img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Força o ícone do Tampermonkey a ficar totalmente branco */
+.cards-ferramentas .tool img.icon-tampermonkey {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.cards-ferramentas .tool span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Efeito Hover (passar o mouse) */
+.cards-ferramentas .tool:hover {
+    transform: scale(1.08);
+    border-color: aqua;
+    box-shadow: 0 0 12px aqua;
+    background: aqua;
+    color: #000;
+}
+
+/* Ajusta o Tampermonkey no hover para acompanhar o texto preto */
+.cards-ferramentas .tool:hover img.icon-tampermonkey {
+    filter: brightness(0);
+}
+/* ========================================================= */
+/* CONTAINER MINHAS HABILIDADES */
+/* ========================================================= */
 
 section.especialidades{  /*Afastando o texto da linha muito bom*/
     padding: 100px 4%;
@@ -227,10 +365,7 @@ section.especialidades .flex {
     margin: 25px 0;  /*Distância entre o texto e o título*/
 }
 
-
-/*Estilo Sobre meu perfil
-*/
-
+/*Estilo Sobre meu perfil*/
 section.sobre{
     padding: 90px 4%;
     align-items: center;
@@ -261,7 +396,6 @@ section.sobre .flex{
     text-align: justify;
 }
 
-
 .btn-social button{
     width: 60px;
     height: 60px;
@@ -274,7 +408,6 @@ section.sobre .flex{
 }
 
 /*Estilo do portfólio*/
-
 #portfolio {
     scroll-margin-top: 90px;
 }
@@ -328,23 +461,18 @@ section.portfolio .flex{
     opacity: 1;
 }
 
-/* Faz o link dentro da overlay ficar branco e tirar sublinhado */
 .overlay a {
     color: #ffffff;         /* branco */
     text-decoration: none;   /* remove sublinhado */
     font-weight: bold;       /* opcional: negrito */
 }
 
-/* Efeito quando o mouse passa sobre o link */
 .overlay a:hover {
     color: aqua;         /* muda cor ao passar o mouse */
     cursor: pointer;        /* mostra a mãozinha */
 }
 
-/* Testando Leituras*/
-
 /*Estilo do Formulário de Contato*/
-
 section.formulario{
     padding: 80px 4%;
 }
@@ -357,7 +485,6 @@ form{
     flex-direction: column;
     gap: 10px;
     margin-top: 60px;
-    
 }
 
 form input, form textarea{
@@ -378,13 +505,11 @@ form input::placeholder{
 form textarea{
     resize: none;
     max-width: 500px;
-    
 }
 
 form .btn-enviar{
     margin-top: 20px;
     text-align: center;
-
 }
 
 form .btn-enviar input{
@@ -394,8 +519,8 @@ form .btn-enviar input{
     font-weight: 700;
     cursor: pointer;
     transition: .3s;
-
 }
+
 /*Formulario envios */
 #mensagem-form {
     text-align: center;
@@ -434,9 +559,7 @@ form .btn-enviar input{
     cursor: not-allowed;
 }
 
-
-
-/*Boões do portfolio */
+/*Botoes do portfolio */
 .filtros {
     text-align: center;
     margin-top: 40px;
@@ -459,7 +582,6 @@ form .btn-enviar input{
 }
 
 /*Estilo do rodape*/
-
 footer{
     padding: 40px 4%;
     box-shadow: 0 0 40px 9px aqua;
@@ -473,101 +595,76 @@ footer .flex {
     gap: 20px;                  
 }
 
-
 footer .line-footer{
     padding: 20px 0;
 }
 
 .borda{
     border-top: 1px solid aqua;
-
 }
- /* Linha do rodapé */
+
 footer .line-footer p i{
     color: aqua;
     font-size: 22px;
-    
 }
 
 footer .line-footer p a{
     color: antiquewhite;
-    
 }
 
-/* Ajuste da logo do footer */
 footer .logo-footer img {
-    max-width: 180px;  /* controla largura máxima */
-    width: 100%;       /* torna responsivo em telas pequenas */
-    height: auto;      /* mantém proporção */
-    display: block;    /* remove espaços extras */
+    max-width: 180px;  
+    width: 100%;       
+    height: auto;      
+    display: block;    
 }
-
 
 /*Deixando o site responsivo */
-
-
-/* Menu lateral só aparece no mobile */
 .menu-lateral {
-    display: none; /* esconde por padrão */
+    display: none; 
 }
 
-
-
-/* Botão menu mobile */
-
 .menu-mobile {
-    display: none; /* esconde por padrão */
+    display: none; 
 }
 
 @media screen and (max-width: 1020px){
 
     .menu-mobile {
-        display: block; /* mostra o botão */
+        display: block; 
     }
 
     .menu-lateral {
-        display: block; /* mostra o menu lateral quando estiver no mobile */
+        display: block; 
     }
 
-    /* esconder menu desktop e botão contato no mobile */
     .menu-desktop,
     .btn-contato {
         display: none;
     }
-    
 
-
-    /* Estilo da logo */
     header .logo img {
-    width: 130px;   /* controla a largura */
-    height: auto;   /* mantém a proporção da imagem */
+        width: 130px;   
+        height: auto;   
     }
 
-    /*Classes gerais*/
     .flex{
         flex-direction: column;
     }
 
     h2.titulo{
-    font-size: 27px;
-    line-height: 30px;
-    text-align: center;
+        font-size: 27px;
+        line-height: 30px;
+        text-align: center;
     }
 
     .topo-do-site .flex{
         flex-direction: column-reverse;
     }
 
-    /*cabeçalho navegador*/
-    .menu-desktop, .btn-contato{
-        display: none;
-    }
-
     .menu-desktop {
-    position: relative;
-}
-
-    /*Topo do site*/
+        position: relative;
+    }
 
     section.topo-do-site{
         padding: 27px 8%;
@@ -578,187 +675,137 @@ footer .logo-footer img {
         text-align: center;
     }
 
-
-    /*Especialidades*/
-
     section.especialidades{
-    margin-bottom: 50px;
-    padding: 50px 8%;
-    display: grid;
-    gap: 70px;
-    
-}
+        margin-bottom: 50px;
+        padding: 50px 8%;
+        display: grid;
+        gap: 70px;
+    }
 
-section.especialidades h2 {
-    color: antiquewhite;
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 50px; /* aumenta a distância entre o título e os boxes */
-}
-
-  /*  section.especialidades {
-    padding: 40px 6%;
-    }*/
-
-
-    /*Sobre*/
+    section.especialidades h2 {
+        color: antiquewhite;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 50px; 
+    }
 
     section.sobre{
-    padding: 80px 8%;
-    align-items: center;
-}
+        padding: 80px 8%;
+        align-items: center;
+    }
 
+    .sobre .txt-sobre h2{
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
 
-.sobre .txt-sobre h2{
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-}
+    .btn-social{
+        text-align: center;
+    }
 
+    .img-sobre img{  
+        width: 280px;   
+        height: auto;   
+    }
 
-.btn-social{
-    text-align: center;
-}
+    section.portfolio{
+        padding: 80px 4%;
+        box-shadow: 0 0 40px 9px aqua;
+    }
 
-/*Imagem da descrição sobre*/
+    .esconder {
+        display: none;
+    }
 
-.img-sobre img{  /*Imagem da descrição sobre*/
- width: 280px;   /* controla a largura */
- height: auto;   /* mantém a proporção da imagem */
-}
+    .filtros button.ativo {
+        background: white;
+        color: black;
+    }
 
+    .img-port {
+        transition: 0.4s;
+        width: 100%;
+        max-width:360px;
+        margin: 0 auto;
+        height: 160px;
+        background-size: cover;
+        background-position: 100% 0%;
+        transition: 8s;
+        cursor: pointer;
+        border-radius: 15PX;
+        position: relative;
+    }   
 
-/*Portfolio*/
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 255, 255, 0.103);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 600;
+        color:antiquewhite;
+        opacity: 0;
+        transition: .5s;
+    }
 
-
-section.portfolio{
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 9px aqua;
-}
-
-.esconder {
-    display: none;
-}
-
-
-.filtros button.ativo {
-    background: white;
-    color: black;
-}
-
-
-.img-port {
-    transition: 0.4s;
-}
-
-
-/*Fim section bottuns */
-
-
-section.portfolio{
-    padding: 80px 4%;
-    
-}
-
-.img-port{
-    width: 100%;
-    max-width:360px;
-    margin: 0 auto;
-    height: 160px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 15PX;
-    position: relative;
-}   
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.103);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
-    color:antiquewhite;
-    opacity: 0;
-    transition: .5s;
-}
-
-/* Botão menu mobile */
-.menu-mobile {
-    display: none;
-    font-size: 40px;
-    color: aqua;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* Menu lateral */
-.menu-lateral {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    box-shadow: -2px 0 8px rgba(0, 255, 255, 0.4);
-    transition: right 0.3s ease;
-    z-index: 1000;
-    padding-top: 80px;
-}
-
-.menu-lateral ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.menu-lateral ul li {
-    margin: 20px 0;
-}
-
-.menu-lateral ul li a {
-    color: antiquewhite;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.menu-lateral ul li a:hover {
-    color: aqua;
-}
-
-/* Ativo */
-.menu-lateral.ativo {
-    right: 0;
-}
-
-/* Só aparece no mobile */
-@media screen and (max-width: 1020px) {
     .menu-mobile {
         display: block;
+        font-size: 40px;
+        color: aqua;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-lateral {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: rgba(0,0,0,0.95);
+        box-shadow: -2px 0 8px rgba(0, 255, 255, 0.4);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+    }
+
+    .menu-lateral ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-lateral ul li {
+        margin: 20px 0;
+    }
+
+    .menu-lateral ul li a {
+        color: antiquewhite;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .menu-lateral ul li a:hover {
+        color: aqua;
+    }
+
+    .menu-lateral.ativo {
+        right: 0;
     }
 }
 
-
-}
-
-
-/*Section Leitura outra aba*/
-
-
+/*Section Leitura*/
 .leituras {
     padding: 80px 4%;
 }
-
-
 
 .leituras .flex {
     justify-content: center;
@@ -792,7 +839,6 @@ section.portfolio{
     transform: scale(1.05);
 }
 
-
 .info {
     width: 100%;
     margin-top: 10px;
@@ -803,11 +849,9 @@ section.portfolio{
     font-size: 16px;
     color: antiquewhite;
     font-weight: 600;
-    
-    /* O TRUQUE: Força a área do título a ter sempre o espaço de 3 linhas */
     height: 68px; 
     display: flex;
-    align-items: center;      /* Centraliza títulos menores verticalmente */
+    align-items: center;      
     justify-content: center;
     margin-bottom: 10px;
 }
@@ -817,14 +861,11 @@ section.portfolio{
     color: #ccc;
     line-height: 1.4;
     text-align: justify;
-
     padding: 10px;
     border-radius: 12px;
-
     background-color: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.2);
 }
-
 
 a {
     text-decoration: none;
@@ -846,7 +887,7 @@ a {
 }
 
 .carrossel-viewport {
-    width: 1350px; /* 5 livros de 220px + gap */
+    width: 1350px; 
     overflow: hidden;
 }
 
@@ -858,7 +899,6 @@ a {
 }
 
 /*Botão Carrossel */
-
 .seta {
     background: rgba(0, 255, 255, 0.2);
     border: none;
@@ -880,8 +920,6 @@ a {
 }
 
 /* Linhas de Divisão */
-
-/*Divisão entre blocos */
 section {
     position: relative;
 }
@@ -902,7 +940,6 @@ section::after {
 }
 
 /* botão topo do site*/
-
 #btn-topo {
     position: fixed;
     bottom: 30px;
@@ -918,14 +955,12 @@ section::after {
     display: none;
     z-index: 999;
     transition: 0.3s;
-    
 }
 
 #btn-topo:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #00ffff;
 }
-
 
 #btn-topo.ativo {
     opacity: 1;
