@@ -1,128 +1,191 @@
-/*Estilo Geral*/
-*{
+/* =========================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: black;
-    height: 100vh;
-}
-
-/* dando vida aos navegadores */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-.interface{
-    max-width: 1480px;   
+body {
+    background-color: #000;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   2. CLASSES UTILITÁRIAS E REUTILIZÁVEIS
+   ========================================================= */
+.interface {
+    max-width: 1480px;
     margin: 0 auto;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-/*Grupo Botões iniciooo contato currículo*/
-.grupo-botoes{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+h2.titulo {
+    color: antiquewhite;
+    font-size: 36px;
+    text-align: center;
 }
 
-.btn{
+h2.titulo span {
+    color: aqua;
+}
+
+/* Botões Padrão */
+.btn {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color:aqua;
+    background-color: aqua;
     border: 0;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #00c8c8;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/*Fim Grupo Botões*/
-
-h2.titulo{
-    color: antiquewhite;
-    font-size: 36px;
-    text-align: center;
-}
-
-h2.titulo span{
-    color: aqua;
-}
-
-button:hover, form .btn-enviar input:hover{
-    box-shadow: 0px 0px 8px aqua;
-    transform: scale(1.05); 
-}
-
-/*Estilo do Cabeçalho*/
-header{
-    padding: 20px 3%;   /*Ajustar a altura das páginas*/
-}
-
-header > .interface{
+.grupo-botoes {
     display: flex;
-    align-items:center;
+    gap: 20px;
+    align-items: center;
+}
+
+button:hover, 
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px aqua;
+    transform: scale(1.05);
+}
+
+/* Linhas de Divisão entre Seções */
+section {
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, aqua, transparent);
+}
+
+.section-divider {
+    width: 90%;
+    max-width: 1200px;
+    height: 1px;
+    margin: 80px auto 60px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 212, 255, 0.35),
+        rgba(255, 255, 255, 0.08),
+        transparent
+    );
+}
+
+/* =========================================================
+   3. CABEÇALHO & NA VEGAÇÃO
+   ========================================================= */
+header {
+    padding: 20px 3%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-header a{
-    color: rgba(9, 218, 255, 0.767);
-    text-decoration: none;
-    display: inline-block;
-    transition: .3s;
+header .logo img {
+    width: 180px;
+    height: auto;
 }
 
-header a:hover{
+header a {
+    color: rgba(9, 218, 255, 0.767);
+    display: inline-block;
+    transition: 0.3s;
+}
+
+header a:hover {
     color: antiquewhite;
     transform: scale(1.09);
 }
 
-header nav ul{
+header nav ul {
     list-style-type: none;
 }
 
-header nav ul li{
+header nav ul li {
     display: inline-block;
     padding: 0 40px;
-    font-size: 17px; /*Tamanho da fonte do meu superior*/
+    font-size: 17px;
 }
 
-/* Estilo da logo */
-header .logo img {
-    width: 180px;   /* controla a largura */
-    height: auto;   /* mantém a proporção da imagem */
+/* Menus Mobile/Lateral (Ocultos no Desktop) */
+.menu-lateral,
+.menu-mobile {
+    display: none;
 }
 
-/*Topo do Site*/
-section.topo-do-site{
-    padding: 20px 4%;  /*texto ao ado da imagem*/
+/* =========================================================
+   4. SEÇÃO: TOPO DO SITE (HERO)
+   ========================================================= */
+section.topo-do-site {
+    padding: 20px 4%;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 60px;
 }
 
-.topo-do-site h1{
+.topo-do-site h1 {
     color: antiquewhite;
     font-size: 47px;
     line-height: 40px;
 }
 
-.digitando::after {   /*Alterando o ponot final do portfolio*/
+.topo-do-site h1 span {
+    color: aqua;
+    font-size: 74px;
+}
+
+.topo-do-site p {
+    color: antiquewhite;
+    margin: 20px;
+}
+
+.topo-do-site .img-topo-do-site img {
+    position: relative;
+    animation: flutuar 3s ease-in-out infinite alternate;
+    width: 420px;
+    height: auto;
+}
+
+/* Efeito Digitando */
+.digitando::after {
     content: '.|';
     margin-left: 5px;
     animation: pisca 0.6s infinite;
@@ -130,46 +193,18 @@ section.topo-do-site .flex{
 }
 
 @keyframes pisca {
-    0%, 100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
-.topo-do-site h1 span{
-    color: aqua;
-    font-size: 74px;
+@keyframes flutuar {
+    0% { top: 0; }
+    100% { top: 40px; }
 }
 
-.topo-do-site p{
-    color: antiquewhite;
-    margin: 20px;
-    margin-top: 20px;
-}
-
-.topo-do-site .img-topo-do-site img{
-    position: relative;
-    animation: flutuar 3s ease-in-out infinite alternate;
-    width: 420px;   /* controla a largura */
-    height: auto;   /* mantém a proporção da imagem */
-}
-
-@keyframes flutuar{
-    0%{
-        top: 0;
-    }
-    100%{
-        top: 40px;
-    }
-}
-
-/* ========================================================= */
-/* SEÇÃO GERAL DE HABILIDADES (IMPACTO / ESPECIALIDADES / FERRAMENTAS) */
-/* ========================================================= */
-
+/* =========================================================
+   5. SEÇÃO: HABILIDADES (IMPACTO / ESPECIALIDADES / FERRAMENTAS)
+   ========================================================= */
 .secao-geral-habilidades {
     padding: 80px 4%;
     width: 100%;
@@ -183,7 +218,7 @@ section.topo-do-site .flex{
     margin-bottom: 0;
 }
 
-/* --- 1. CARDS DE IMPACTO --- */
+/* 5.1 Cards de Impacto */
 .cards-impacto {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,7 +261,7 @@ section.topo-do-site .flex{
     color: #ccc;
 }
 
-/* --- 2. CARDS DE ESPECIALIDADES --- */
+/* 5.2 Cards de Especialidades */
 .cards-especialidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -263,8 +298,7 @@ section.topo-do-site .flex{
     font-weight: 600;
 }
 
-/* --- 3. CARDS DE FERRAMENTAS --- */
-/* --- CARDS DE FERRAMENTAS --- */
+/* 5.3 Cards de Ferramentas */
 .cards-ferramentas {
     display: flex;
     flex-wrap: wrap;
@@ -286,7 +320,6 @@ section.topo-do-site .flex{
     cursor: pointer;
 }
 
-/* Tamanho padronizado para ícones Devicon e Imagens */
 .cards-ferramentas .tool i {
     font-size: 24px;
 }
@@ -297,7 +330,6 @@ section.topo-do-site .flex{
     object-fit: contain;
 }
 
-/* Força o ícone do Tampermonkey a ficar totalmente branco */
 .cards-ferramentas .tool img.icon-tampermonkey {
     filter: brightness(0) invert(1);
     transition: filter 0.3s ease;
@@ -308,7 +340,6 @@ section.topo-do-site .flex{
     font-weight: 500;
 }
 
-/* Efeito Hover (passar o mouse) */
 .cards-ferramentas .tool:hover {
     transform: scale(1.08);
     border-color: aqua;
@@ -317,35 +348,31 @@ section.topo-do-site .flex{
     color: #000;
 }
 
-/* Ajusta o Tampermonkey no hover para acompanhar o texto preto */
 .cards-ferramentas .tool:hover img.icon-tampermonkey {
     filter: brightness(0);
 }
-/* ========================================================= */
-/* CONTAINER MINHAS HABILIDADES */
-/* ========================================================= */
 
-section.especialidades{  /*Afastando o texto da linha muito bom*/
+/* 5.4 Container Específico de Especialidades */
+section.especialidades {
     padding: 100px 4%;
 }
 
 section.especialidades .flex {
     display: flex;
-    margin-top: 30px; /*Afastando o título do texto*/
-    flex-wrap: wrap;      /* permite quebrar a linha */
-    gap: 33px;            /* espaço entre os boxes */
-    justify-content: center; /* centraliza os boxes */
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 33px;
+    justify-content: center;
 }
 
-/* Cada box de especialidade */
 .especialidades .especialidades-box {
     color: antiquewhite;
     padding: 30px;
     border-radius: 20px;
-    transition: .2s;
-    flex: 1 1 calc(33.333% - 40px); /* ocupa 1/3 da linha, considerando o gap */
+    transition: 0.2s;
+    flex: 1 1 calc(33.333% - 40px);
     box-sizing: border-box;
-    min-width: 250px; /* garante responsividade em telas pequenas */
+    min-width: 250px;
 }
 
 .especialidades .especialidades-box:hover {
@@ -356,50 +383,52 @@ section.especialidades .flex {
 .especialidades .especialidades-box i {
     margin-top: 40px;
     margin-bottom: 80px;
-    font-size: 36px; /*Tamanho do título "Minhas Habilidades"*/
-    color: aqua;   /*Cor do texto*/
+    font-size: 36px;
+    color: aqua;
 }
 
 .especialidades .especialidades-box h3 {
-    font-size: 25px; /*Título em minhas habilidades "Tamanho"*/
-    margin: 25px 0;  /*Distância entre o texto e o título*/
+    font-size: 25px;
+    margin: 25px 0;
 }
 
-/*Estilo Sobre meu perfil*/
-section.sobre{
+/* =========================================================
+   6. SEÇÃO: SOBRE MIM
+   ========================================================= */
+section.sobre {
     padding: 90px 4%;
     align-items: center;
 }
 
-section.sobre .flex{
+section.sobre .flex {
     align-items: center;
     gap: 60px;
 }
 
-.sobre .txt-sobre{
+.sobre .txt-sobre {
     color: antiquewhite;
 }
 
-.sobre .txt-sobre h2{
+.sobre .txt-sobre h2 {
     font-size: 44px;
     line-height: 40px;
     margin-bottom: 30px;
 }
 
-.sobre .txt-sobre h2 span{
+.sobre .txt-sobre h2 span {
     color: aqua;
     display: block;
 }
 
-.sobre .txt-sobre p{
+.sobre .txt-sobre p {
     margin: 20px 0;
     text-align: justify;
 }
 
-.btn-social button{
+.btn-social button {
     width: 60px;
     height: 60px;
-    border-radius: 60%;
+    border-radius: 50%;
     border: none;
     background-color: aqua;
     font-size: 33px;
@@ -407,39 +436,41 @@ section.sobre .flex{
     margin: 0 5px;
 }
 
-/*Estilo do portfólio*/
+/* =========================================================
+   7. SEÇÃO: PORTFÓLIO
+   ========================================================= */
 #portfolio {
     scroll-margin-top: 90px;
 }
 
-section.portfolio{
+section.portfolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 9px aqua;
 }
 
-section.portfolio .flex{
-    display: grid; /*Diposição da visualização baseada em grid da seção*/
-    grid-template-columns: repeat(3, 1fr); /*Grid da disposição de projetos por linha*/
+section.portfolio .flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 60px;
 }
 
-.img-port{
+.img-port {
     width: 360px;
     height: 460px;
     background-size: cover;
     background-position: 100% 0%;
-    transition: 3s; /*velocidade que a imagem sobre*/
+    transition: 3s;
     cursor: pointer;
-    border-radius: 20px;  /*Aqui está as bordas da imagem*/
+    border-radius: 20px;
     position: relative;
 }
 
-.img-port:hover{
+.img-port:hover {
     background-position: 100% 100%;
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -447,119 +478,30 @@ section.portfolio .flex{
     height: 100%;
     background-color: rgba(63, 223, 223, 0.103);
     border-radius: 40px;
-    display: flex; /*Nome do projeto no portfolio*/
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
-    color:antiquewhite;
-    opacity: .2;
-    transition: .3s;
+    color: antiquewhite;
+    opacity: 0.2;
+    transition: 0.3s;
 }
 
-.overlay:hover{
+.overlay:hover {
     opacity: 1;
 }
 
 .overlay a {
-    color: #ffffff;         /* branco */
-    text-decoration: none;   /* remove sublinhado */
-    font-weight: bold;       /* opcional: negrito */
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .overlay a:hover {
-    color: aqua;         /* muda cor ao passar o mouse */
-    cursor: pointer;        /* mostra a mãozinha */
-}
-
-/*Estilo do Formulário de Contato*/
-section.formulario{
-    padding: 80px 4%;
-}
-
-form{
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 60px;
-}
-
-form input, form textarea{
-    width: 100%;
-    background-color: rgba(0, 255, 255, 0.123);
-    border: 0;
-    outline: 0;
-    padding: 20px 15px;
-    border-radius: 15px;
-    color: antiquewhite;
-    font-size: 18px;
-}
-
-form input::placeholder{
     color: aqua;
-}
-
-form textarea{
-    resize: none;
-    max-width: 500px;
-}
-
-form .btn-enviar{
-    margin-top: 20px;
-    text-align: center;
-}
-
-form .btn-enviar input{
-    width: 120px;
-    background-color: rgba(0, 255, 255, 0.377);
-    color: antiquewhite;
-    font-weight: 700;
     cursor: pointer;
-    transition: .3s;
 }
 
-/*Formulario envios */
-#mensagem-form {
-    text-align: center;
-    font-weight: 600;
-    margin-top: 15px;
-    min-height: 24px;
-}
-
-#mensagem-form.sucesso {
-    color: aqua;
-}
-
-#mensagem-form.erro {
-    color: #ff4d4d;
-}
-
-.btn-enviar button {
-    width: 120px;
-    padding: 15px;
-    background-color: rgba(0, 255, 255, 0.377);
-    color: antiquewhite;
-    border: none;
-    border-radius: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.btn-enviar button:hover {
-    box-shadow: 0px 0px 8px aqua;
-    transform: scale(1.05);
-}
-
-.btn-enviar button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/*Botoes do portfolio */
 .filtros {
     text-align: center;
     margin-top: 40px;
@@ -569,7 +511,7 @@ form .btn-enviar input{
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color:aqua;
+    background-color: aqua;
     border: 0;
     border-radius: 20px;
     cursor: pointer;
@@ -581,228 +523,18 @@ form .btn-enviar input{
     box-shadow: 0 0 10px aqua;
 }
 
-/*Estilo do rodape*/
-footer{
-    padding: 40px 4%;
-    box-shadow: 0 0 40px 9px aqua;
+.filtros button.ativo {
+    background: white;
+    color: black;
 }
 
-footer .flex {
-    display: flex;              
-    align-items: center;        
-    justify-content: space-between; 
-    flex-wrap: nowrap;          
-    gap: 20px;                  
+.esconder {
+    display: none;
 }
 
-footer .line-footer{
-    padding: 20px 0;
-}
-
-.borda{
-    border-top: 1px solid aqua;
-}
-
-footer .line-footer p i{
-    color: aqua;
-    font-size: 22px;
-}
-
-footer .line-footer p a{
-    color: antiquewhite;
-}
-
-footer .logo-footer img {
-    max-width: 180px;  
-    width: 100%;       
-    height: auto;      
-    display: block;    
-}
-
-/*Deixando o site responsivo */
-.menu-lateral {
-    display: none; 
-}
-
-.menu-mobile {
-    display: none; 
-}
-
-@media screen and (max-width: 1020px){
-
-    .menu-mobile {
-        display: block; 
-    }
-
-    .menu-lateral {
-        display: block; 
-    }
-
-    .menu-desktop,
-    .btn-contato {
-        display: none;
-    }
-
-    header .logo img {
-        width: 130px;   
-        height: auto;   
-    }
-
-    .flex{
-        flex-direction: column;
-    }
-
-    h2.titulo{
-        font-size: 27px;
-        line-height: 30px;
-        text-align: center;
-    }
-
-    .topo-do-site .flex{
-        flex-direction: column-reverse;
-    }
-
-    .menu-desktop {
-        position: relative;
-    }
-
-    section.topo-do-site{
-        padding: 27px 8%;
-    }
-    .topo-do-site h1{
-        font-size: 37px;
-        line-height: 70%;
-        text-align: center;
-    }
-
-    section.especialidades{
-        margin-bottom: 50px;
-        padding: 50px 8%;
-        display: grid;
-        gap: 70px;
-    }
-
-    section.especialidades h2 {
-        color: antiquewhite;
-        font-size: 36px;
-        text-align: center;
-        margin-bottom: 50px; 
-    }
-
-    section.sobre{
-        padding: 80px 8%;
-        align-items: center;
-    }
-
-    .sobre .txt-sobre h2{
-        font-size: 30px;
-        line-height: 30px;
-        text-align: center;
-    }
-
-    .btn-social{
-        text-align: center;
-    }
-
-    .img-sobre img{  
-        width: 280px;   
-        height: auto;   
-    }
-
-    section.portfolio{
-        padding: 80px 4%;
-        box-shadow: 0 0 40px 9px aqua;
-    }
-
-    .esconder {
-        display: none;
-    }
-
-    .filtros button.ativo {
-        background: white;
-        color: black;
-    }
-
-    .img-port {
-        transition: 0.4s;
-        width: 100%;
-        max-width:360px;
-        margin: 0 auto;
-        height: 160px;
-        background-size: cover;
-        background-position: 100% 0%;
-        transition: 8s;
-        cursor: pointer;
-        border-radius: 15PX;
-        position: relative;
-    }   
-
-    .overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 255, 255, 0.103);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 15px;
-        font-weight: 600;
-        color:antiquewhite;
-        opacity: 0;
-        transition: .5s;
-    }
-
-    .menu-mobile {
-        display: block;
-        font-size: 40px;
-        color: aqua;
-        cursor: pointer;
-        z-index: 1001;
-    }
-
-    .menu-lateral {
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100%;
-        background: rgba(0,0,0,0.95);
-        box-shadow: -2px 0 8px rgba(0, 255, 255, 0.4);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        padding-top: 80px;
-    }
-
-    .menu-lateral ul {
-        list-style: none;
-        padding: 0;
-        text-align: center;
-    }
-
-    .menu-lateral ul li {
-        margin: 20px 0;
-    }
-
-    .menu-lateral ul li a {
-        color: antiquewhite;
-        font-size: 20px;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-
-    .menu-lateral ul li a:hover {
-        color: aqua;
-    }
-
-    .menu-lateral.ativo {
-        right: 0;
-    }
-}
-
-/*Section Leitura*/
+/* =========================================================
+   8. SEÇÃO: LEITURAS & CARROSSEL
+   ========================================================= */
 .leituras {
     padding: 80px 4%;
 }
@@ -817,13 +549,17 @@ footer .logo-footer img {
     color: antiquewhite;
     padding: 15px;
     border-radius: 20px;
-    transition: .2s;
+    transition: 0.2s;
     flex: 0 0 240px;
-    width: 240px; 
+    width: 240px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.livro:hover {
+    transform: scale(1.05);
 }
 
 .livro img {
@@ -833,10 +569,6 @@ footer .logo-footer img {
     background-color: rgba(0, 255, 255, 0.1);
     padding: 10px;
     border-radius: 15px;
-}
-
-.livro:hover {
-    transform: scale(1.05);
 }
 
 .info {
@@ -849,9 +581,9 @@ footer .logo-footer img {
     font-size: 16px;
     color: antiquewhite;
     font-weight: 600;
-    height: 68px; 
+    height: 68px;
     display: flex;
-    align-items: center;      
+    align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
@@ -867,17 +599,12 @@ footer .logo-footer img {
     border: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-a {
-    text-decoration: none;
-}
-
 .resenha:hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     transition: 0.3s;
 }
 
-/*Carrosel */
 .carrossel {
     display: flex;
     align-items: center;
@@ -887,7 +614,7 @@ a {
 }
 
 .carrossel-viewport {
-    width: 1350px; 
+    width: 1350px;
     overflow: hidden;
 }
 
@@ -898,7 +625,6 @@ a {
     transition: transform 0.5s ease;
 }
 
-/*Botão Carrossel */
 .seta {
     background: rgba(0, 255, 255, 0.2);
     border: none;
@@ -919,27 +645,121 @@ a {
     color: black;
 }
 
-/* Linhas de Divisão */
-section {
-    position: relative;
+/* =========================================================
+   9. SEÇÃO: FORMULÁRIO DE CONTATO
+   ========================================================= */
+section.formulario {
+    padding: 80px 4%;
 }
 
-section::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        aqua,
-        transparent
-    );
+form {
+    max-width: 500px;
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* botão topo do site*/
+form input, 
+form textarea {
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.123);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+form input::placeholder {
+    color: aqua;
+}
+
+form textarea {
+    resize: none;
+    max-width: 500px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-enviar button,
+form .btn-enviar input {
+    width: 120px;
+    padding: 15px;
+    background-color: rgba(0, 255, 255, 0.377);
+    color: antiquewhite;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar button:hover {
+    box-shadow: 0px 0px 8px aqua;
+    transform: scale(1.05);
+}
+
+.btn-enviar button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#mensagem-form {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    min-height: 24px;
+}
+
+#mensagem-form.sucesso { color: aqua; }
+#mensagem-form.erro { color: #ff4d4d; }
+
+/* =========================================================
+   10. RODAPÉ & BOTÃO VOLTAR AO TOPO
+   ========================================================= */
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 9px aqua;
+}
+
+footer .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+footer .line-footer.borda {
+    border-top: 1px solid aqua;
+}
+
+footer .line-footer p i {
+    color: aqua;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: antiquewhite;
+}
+
+footer .logo-footer img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 #btn-topo {
     position: fixed;
     bottom: 30px;
@@ -965,4 +785,145 @@ section::after {
 #btn-topo.ativo {
     opacity: 1;
     visibility: visible;
+}
+
+/* =========================================================
+   11. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================= */
+@media screen and (max-width: 1020px) {
+    /* Ajustes Gerais */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 27px;
+        line-height: 30px;
+    }
+
+    /* Navegação Mobile */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        font-size: 40px;
+        color: aqua;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-lateral {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        box-shadow: -2px 0 8px rgba(0, 255, 255, 0.4);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+    }
+
+    .menu-lateral ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu-lateral ul li {
+        margin: 20px 0;
+    }
+
+    .menu-lateral ul li a {
+        color: antiquewhite;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+
+    .menu-lateral ul li a:hover {
+        color: aqua;
+    }
+
+    .menu-lateral.ativo {
+        right: 0;
+    }
+
+    header .logo img {
+        width: 130px;
+    }
+
+    /* Seção Hero */
+    section.topo-do-site {
+        padding: 27px 8%;
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    .topo-do-site h1 {
+        font-size: 37px;
+        line-height: 70%;
+        text-align: center;
+    }
+
+    /* Seções Internas */
+    section.especialidades {
+        margin-bottom: 50px;
+        padding: 50px 8%;
+        display: grid;
+        gap: 70px;
+    }
+
+    section.especialidades h2 {
+        color: antiquewhite;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 280px;
+        height: auto;
+    }
+
+    /* Portfólio */
+    section.portfolio {
+        padding: 80px 4%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        height: 160px;
+        margin: 0 auto;
+        border-radius: 15px;
+        transition: 8s;
+    }
+
+    .overlay {
+        border-radius: 15px;
+        font-size: 15px;
+        opacity: 0;
+        transition: 0.5s;
+    }
 }

@@ -1,0 +1,178 @@
+================================================================================
+DOCUMENTAÇÃO TÉCNICA DO CSS — PORTFÓLIO Rafael Santos Duodecim
+================================================================================
+
+--------------------------------------------------------------------------------
+1. VISÃO GERAL & GUIA DE ESTILO
+--------------------------------------------------------------------------------
+
+Esta folha de estilo (style.css) estabelece uma estética Dark Theme com
+influências Neomórficas e Cyberpunk, utilizando um fundo escuro enriquecido
+por detalhes brilhantes em ciano/aqua.
+
+PALETA DE CORES:
+- Fundo Principal e Menus:       #000000 / rgba(0, 0, 0, 0.95)
+- Cor de Destaque Primária:      aqua (#00ffff)
+- Estado Hover (Botões):        #00c8c8
+- Títulos e Destaques:          antiquewhite
+- Texto de Corpo e Subtítulos:  #ffffff / #ccc
+- Transparências/Superfícies:   rgba(0, 255, 255, 0.03) a rgba(0, 255, 255, 0.2)
+- Feedback Erro:                 #ff4d4d
+
+TIPOGRAFIA:
+- Fonte Principal: 'Poppins', sans-serif
+
+
+--------------------------------------------------------------------------------
+2. ESTRUTURA DO ARQUIVO
+--------------------------------------------------------------------------------
+
+style.css
+├── 1. Configurações Gerais e Reset
+├── 2. Classes Utilitárias e Reutilizáveis
+├── 3. Cabeçalho & Navegação
+├── 4. Seção: Topo do Site (Hero)
+├── 5. Seção: Habilidades (Impacto / Especialidades / Ferramentas)
+├── 6. Seção: Sobre Mim
+├── 7. Seção: Portfólio
+├── 8. Seção: Leituras & Carrossel
+├── 9. Seção: Formulário de Contato
+├── 10. Rodapé & Botão Voltar ao Topo
+└── 11. Responsividade (Media Queries)
+
+
+--------------------------------------------------------------------------------
+3. DETALHAMENTO DOS MÓDULOS
+--------------------------------------------------------------------------------
+
+3.1 CONFIGURAÇÕES GERAIS E RESET
+--------------------------------
+Remove margens e preenchimentos padrão do navegador, aplica 'border-box'
+para um cálculo previsível de dimensões e ativa a rolagem suave.
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background-color: #000; min-height: 100vh; }
+  a { text-decoration: none; }
+
+
+3.2 CLASSES UTILITÁRIAS E REUTILIZÁVEIS
+----------------------------------------
+Agrupa regras de layout e componentes visuais genéricos reutilizáveis.
+
+- .interface: Container com largura máxima de 1480px e centralização automática.
+- .flex: Utilitário para acionar o Display Flexbox.
+- h2.titulo: Títulos das seções com suporte a span destacado em tom 'aqua'.
+- .btn: Botões arredondados com transição e elevação (translateY) no hover.
+- .section-divider / section::after: Linhas de divisão em gradiente translúcido.
+
+
+3.3 CABEÇALHO & NAVEGAÇÃO
+-------------------------
+Gerencia o posicionamento do topo da aplicação.
+
+- Inclui transição e efeito de escala para os links de navegação.
+- Oculta menus mobile por padrão no desktop (.menu-lateral e .menu-mobile).
+
+
+3.4 SEÇÃO: TOPO DO SITE (HERO)
+------------------------------
+Apresentação inicial do portfólio.
+
+- Contém efeito de digitação simulado via pseudo-elemento (.digitando::after).
+- Apresenta imagem com animação contínua de flutuação (@keyframes flutuar).
+
+
+3.5 SEÇÃO: HABILIDADES
+----------------------
+Organizada em três subdivisões principais:
+
+1. Cards de Impacto (.cards-impacto):
+   Grid responsivo com minmax(280px, 1fr) e efeito de elevação no hover.
+2. Cards de Especialidades (.cards-especialidades):
+   Grid compacto focado nas áreas de atuação.
+3. Ferramentas (.cards-ferramentas):
+   Badges flexíveis interativos. Inclui filtro SVG para o ícone Tampermonkey.
+
+
+3.6 SEÇÃO: SOBRE MIM
+--------------------
+Apresentação biográfica disposta em Flexbox, acompanhada por botões circulares
+para direcionamento de redes sociais (.btn-social button).
+
+
+3.7 SEÇÃO: PORTFÓLIO
+--------------------
+Exibição dos projetos em grade com 3 colunas (desktop).
+
+- .img-port: Imagem com background-position animado que simula a rolagem
+  da página do projeto ao passar o mouse.
+- .overlay: Camada translúcida com links para visualização do projeto.
+- .filtros: Botões para alternância de categorias contendo estilo para o
+  estado ativo (.ativo).
+
+
+3.8 SEÇÃO: LEITURA & CARROSSEL
+------------------------------
+Área destinada a livros e recomendações.
+
+- .carrossel-viewport: Janela de corte de overflow com 1350px de largura.
+- .carrossel-track: Container interno preparado para deslizar via JS.
+- .seta: Botões direcionais circulares posicionados nas extremidades.
+
+
+3.9 SEÇÃO: FORMULÁRIO DE CONTATO
+--------------------------------
+Formulário com largura máxima de 500px e campos translúcidos.
+
+- Contém classes de feedback para o retorno da mensagem (#mensagem-form):
+  - .sucesso: Cor aqua
+  - .erro: Cor #ff4d4d
+
+
+3.10 RODAPÉ & BOTÃO VOLTAR AO TOPO
+-----------------------------------
+Rodapé estruturado em flexbox com divisor brilhante.
+
+- #btn-topo: Botão flutuante fixado no canto inferior direito. É exibido
+  dinamicamente via Javascript ao receber a classe .ativo.
+
+
+3.11 RESPONSIVIDADE (MEDIA QUERIES)
+------------------------------------
+Aplicações para telas com largura máxima de 1020px:
+
+- Converte containers .flex em orientação por coluna (flex-direction: column).
+- Esconde a navegação desktop (.menu-desktop) e exibe o gatilho (.menu-mobile).
+- Ativa o menu lateral (.menu-lateral) com transição de entrada lateral direita.
+- Reduz tamanhos de fonte e ajusta o preenchimento das seções para 8%.
+
+
+--------------------------------------------------------------------------------
+4. ANIMAÇÕES & EFEITOS VISUAIS
+--------------------------------------------------------------------------------
+
+4.1 ANIMAÇÃO: FLUTUAR
+Promove o deslocamento vertical suave da imagem principal do topo.
+
+  @keyframes flutuar {
+      0%   { top: 0; }
+      100% { top: 40px; }
+  }
+
+4.2 ANIMAÇÃO: PISCA
+Simula a intermitência do cursor/prompt em efeitos de texto digitado.
+
+  @keyframes pisca {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+  }
+
+================================================================================
+FIM DA DOCUMENTAÇÃO
+================================================================================
