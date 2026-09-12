@@ -21,6 +21,8 @@ a {
     text-decoration: none;
 }
 
+
+
 /* =========================================================
    2. CLASSES UTILITÁRIAS E REUTILIZÁVEIS
    ========================================================= */
@@ -434,6 +436,23 @@ section.sobre .flex {
     font-size: 33px;
     cursor: pointer;
     margin: 0 5px;
+}
+
+.sobre .img-sobre img {
+    /* Define a borda sólida ao redor da foto */
+    border: 1px solid aqua;
+    border-radius: 9px;; /*Define o arredondadamento das bordas*/
+    
+    /* Efeito de luz (glow) expandido principalmente para baixo (eixo Y = 15px) */
+    box-shadow: 0px 1px 2px rgba(0, 255, 255, 0.6);
+    
+    /* Transição suave caso queira adicionar efeito no hover */
+    transition: 0.3s ease-in-out;
+}
+
+/* Opcional: Aumenta o brilho quando o usuário passar o mouse por cima */
+.sobre .img-sobre img:hover {
+    box-shadow: 0px 2px 15px rgba(0, 255, 255, 0.9);
 }
 
 /* =========================================================
@@ -926,4 +945,41 @@ footer .logo-footer img {
         opacity: 0;
         transition: 0.5s;
     }
+}
+
+
+/*Trabalhando no navegador da página*/
+
+
+/* Estilo base para os links desativados */
+.link-disabled {
+    position: relative;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Criando o balão do Tooltip */
+.link-disabled::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px; /* Posição abaixo do texto */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111; /* Cor de fundo do balão */
+    color: #fff; /* Cor do texto */
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Mostra o Tooltip no hover */
+.link-disabled:hover::after {
+    opacity: 1;
+    visibility: visible;
 }

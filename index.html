@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!--Fim Bootstrap Icons-->
 
-    <!  -- Logo do navegaddor Five Icons -- >
+    <!-- Parte ddois do boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+    <!--Logo do navegaddor Five Icons-->
     <link rel="shortcut icon" href="imagens/duodecim.ico" type="imagenlogonav">
     <!--Fim da logo Icons-->
     
@@ -37,15 +41,16 @@
 
             <!--Botões do Navegador-->
             <!--Navegação por ancoragem-->
-            <nav class="menu-desktop">
+            <nav>
                 <ul>
                     <li><a href="#portfolio">Portfólio</a></li> 
                     <li><a href="#leituras">Minhas Leituras</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Refutações </a></li>
-                    <li><a href="#">Artigos </a></li>
-                    <li><a href="#">Versos Literários</a></li>
-                     
+                    
+                    <!-- Links com Tooltip -->
+                    <li><a href="javascript:void(0)" class="link-disabled" data-tooltip="Em breve">Cursos</a></li>
+                    <li><a href="javascript:void(0)" class="link-disabled" data-tooltip="Em breve">Refutações</a></li>
+                    <li><a href="javascript:void(0)" class="link-disabled" data-tooltip="Em breve">Artigos</a></li>
+                    <li><a href="javascript:void(0)" class="link-disabled" data-tooltip="Em breve">Versos Literários</a></li>
                 </ul>
             </nav>         
 
@@ -104,7 +109,7 @@
                     </div><!--topo-do-site-->
 
                     <div class="img-topo-do-site">
-                         <img src="imagens/rafael.png" alt="pessoa.png"> 
+                         <img src="imagens/Foto de Perfil_Atlzda.jpg" alt="pessoa.png"> 
                     </div><!--img-topo-do-site-->
                 </div><!--flex-->         
             </div><!--interface-->           
@@ -154,7 +159,7 @@
             <div class="card-impacto">
                 <i class="bi bi-award-fill"></i>
                 <h3>99,5%</h3>
-                <p>97% para 99, 5% de SLA Operacional</p>
+                <p>97% para 99, % de SLA Operacional</p>
             </div>
 
             <div class="card-impacto">
@@ -172,8 +177,6 @@
         </div>
 
     </div>
-
-
 
 
 <!-- ================= ESPECIALIDADES ================= -->
@@ -391,7 +394,8 @@
                         </h3>
                         <p>Experiência em liderança e análise de operações logísticas, com atuação em Armazém, First Mile, Last Mile, Sort Center, Service Center 
                             e Transportes. Gestão de equipes, terceiros e motoristas, com foco em indicadores, melhoria contínua e alta performance. 
-                            Resultados alcançados: Geração de Saving em mais de 30k mês, redução de horas extras, redução de banco de horas, +23% de produtividade, SLA elevado de 98% para 99% e 15% de redução nas falhas de processamento.
+                            Resultados alcançados: Geração de Saving em mais de 30k mês, redução de horas extras, redução de banco de horas, +23% de produtividade, 
+                            SLA elevado de 98% para 99% e 15% de redução nas falhas de processamento.
                         </p>
                     </div><!--especialidades-box-->
                     
@@ -452,7 +456,7 @@
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
-                        <img src="imagens/perfil sobre.png" alt = "foto.png">
+                        <img src="imagens/Frame 1 (2).png" alt = "foto.png">
                     </div><!--img-sobre-->
 
                     <div class="txt-sobre">
@@ -488,8 +492,8 @@
                 <div class="filtros">  <!--Botões-->
                 <button onclick="filtrar('todos')">Todos</button>
                 <button onclick="filtrar('bi')">Power BI</button>
-                <button onclick="filtrar('logistica')">Logística</button>
-                <button onclick="filtrar('projetos')">Projetos</button>
+                <button class="link-disabled" data-tooltip="Em breve">Logística</button>
+                <button class="link-disabled" data-tooltip="Em breve">Projetos</button>
                 </div>
                 <div class="flex">
                    <!-- Aqui é o primeiro projeto -->
@@ -663,27 +667,43 @@
         </section><!--formulario-->
     </main>
     
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="imagens/logoblaack.png" alt="logotipo">
-                    </div><!--logo-footer-->
-                    <div class="btn-social">
-                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
-                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                        <a href="#"><button><i class="bi bi-envelope"></i></button></a>
-                        <a href="#"><button><i class="bi bi-github"></i></button></a>
-                    </div><!--btn-social-->
-                </div><!--flex-->                
-            </div><!--line-footer-->
-            <div class="line-footer borda">
-                <p><i class="bi bi-arrow-right-square"></i> <a href="https://wa.me/5521972371368"> Todos os direitos reservados a Rafael Santos</a> </p>
-                
-            </div><!--line-footer-->
-        </div><!--interface-->
-    </footer>
+<footer id="contato">
+    <div class="interface">
+        <div class="line-footer">
+            <div class="flex">
+                <div class="logo-footer">
+                    <img src="imagens/logoblaack.png" alt="logotipo">
+                </div><!--logo-footer-->
+
+                <div class="btn-social">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5521972371368?text=Olá,%20Rafael!%20Vim%20pelo%20seu%20site." target="_blank">
+                        <button><i class="bi bi-whatsapp"></i></button>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/rafael-santos-009607122/" target="_blank">
+                        <button><i class="bi bi-linkedin"></i></button>
+                    </a>
+
+                    <!-- E-mail -->
+                    <a href="mailto:rafael.santos.fina@gmail.com?subject=Contato%20via%20Portfolio">
+                        <button><i class="bi bi-envelope"></i></button>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/RafaelDuodecim" target="_blank">
+                        <button><i class="bi bi-github"></i></button>
+                    </a>
+                </div><!--btn-social-->
+            </div><!--flex-->                
+        </div><!--line-footer-->
+
+        <div class="line-footer borda">
+            <p><i class="bi bi-arrow-right-square"></i> <a href="javascript:void(0)">Todos os direitos reservados a Rafael Santos Duodecim</a></p>
+        </div><!--line-footer-->
+    </div><!--interface-->
+</footer>
 
     <script src="script.js"></script>
 
